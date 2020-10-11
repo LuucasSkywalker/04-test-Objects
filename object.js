@@ -38,7 +38,9 @@ const smartphone = {
     
 }
 
-console.log(smartphone)
+console.log(smartphone);
+
+/************************************************** */
 
 const person = {
 
@@ -48,4 +50,24 @@ const person = {
 };
 const name1 = person.name
 const age1 = person.age
-console.log(name1,age1)
+console.log(name1,age1);
+
+/**************************************************** */
+
+// função bind e this Objeto. Função dentro de objeto
+const person = {
+  hello: 'good morning',
+  speak(){
+      return this.hello  //referênciando THIS a person
+  }
+};
+console.log(person.speak());    //retorna "good morning"
+
+//ou usar assim
+const person1 = {
+  hello: 'good morning',
+  speak(){
+    return console.log(this.hello);
+  }
+};
+person1.speak();         //também retorna "good morning"
