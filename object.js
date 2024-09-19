@@ -5,6 +5,22 @@ o que e um objeto 'UM CONJUNTO DE CHAVES,PARES E VALORES'
 que tem pares EXEMPLO ( (nome: 'blusa') o nome do produto e o valor que e a blusa) .
 podendo conter varios objetos dentro de si proprio  */
 
+// condição de chaves e valores
+const carro = {
+    modelo: 'A4',
+    valor: 89000,
+    proprietario: {
+      nome: 'Raul',
+      idade: 56,
+      endereco: {
+        logradouro: 'Rua ABC',
+        numero: 123
+      }
+    }
+}
+console.log(carro.proprietario.idade)
+
+// -----------------------------------------------
 let produt = {}
 produt.blusa = "cor preta";
 produt.preco = 56.50
