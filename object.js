@@ -16,9 +16,40 @@ const carro = {
         logradouro: 'Rua ABC',
         numero: 123
       }
+      }
     }
-}
-console.log(carro.proprietario.idade)
+console.log(Object.keys(carro))
+console.log(carro)
+/*Uso do método Object.keys():
+A função Object.keys(carro) é usada para obter um array com as chaves (propriedades)
+ do objeto carro. O resultado será um array contendo as chaves de nível superior do 
+ objeto carro, ou seja, ["modelo", "valor", "proprietario"].
+*/
+const exemploEntries = {
+  modelo: 'A4',
+  valor: 89000,
+  proprietario: {
+    nome: 'Raul',
+    idade: 56,
+    endereco: {
+      logradouro: 'Rua ABC',
+      numero: 123
+      }
+    }
+    
+  }
+// console.log(Object.entries(exemploEntries))
+// usando um método de destruturação
+Object.entries(exemploEntries.proprietario.endereco).forEach(([chave, valor]) => {
+  console.log(`${chave}: ${valor}`)
+})
+
+
+/*O método Object.entries() em JavaScript retorna um array dos próprios pares 
+[key, value] enumeráveis de um dado objeto, na mesma ordem que seria fornecida por 
+um laço for...in (com a diferença de que o laço for...in também enumera propriedades 
+na cadeia de protótipos) 
+*/ 
 
 // -----------------------------------------------
 let produt = {}
