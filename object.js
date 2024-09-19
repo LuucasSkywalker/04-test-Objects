@@ -18,6 +18,7 @@ const carro = {
       }
       }
     }
+    
 console.log(Object.keys(carro))
 console.log(carro)
 /*Uso do método Object.keys():
